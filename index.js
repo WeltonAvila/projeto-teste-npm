@@ -15,19 +15,19 @@ server.listen(port,()=>{
 function filtro(req){
 	switch (req.method) {
 		case 'GET':
-			return get(req.url)
+			return get(req.url) + parimpar(req.url)
 			break;
 
 			case 'PUT':
-			return get(req.url)
+			return get(req.url) +  parimpar(req.url)
 			break;
 
 			case 'DELETE':
-			return get(req.url)
+			return get(req.url) + parimpar(req.url)
 			break;
 
 			case 'POST':
-			return del(req.url)
+			return del(req.url) + parimpar(req.url)
 			break;
 
 		default:
@@ -51,4 +51,16 @@ function put(url){
 function del(url){
 	return "A url " + url + " foi chamada delete"
 
+}
+
+function parimpar(uri){
+	let tento =[]
+  for (let tento2=0;tento2<uri.length;tento2++){
+		if(tento2%2==0){
+			tento.push("_PAR_")
+		}else{
+			tento.push("_IMPAR_")
+		}
+	}
+	return tento
 }
