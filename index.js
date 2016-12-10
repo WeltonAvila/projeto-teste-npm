@@ -16,10 +16,10 @@ function filtro(req){
 	return req.url + " " + req.method
 }
 
-function put(){
-
+function put(url){
+	return "A url " + url + " foi chamada PUT"
 }
 
-function delete(){
-	
+function delete(url){
+	return "A url " + url + " foi chamada delete"	
 }
