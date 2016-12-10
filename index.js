@@ -20,6 +20,6 @@ function put(url){
 	return "A url " + url + " foi chamada PUT"
 }
 
-function delete(url){
-	return "A url " + url + " foi chamada delete"	
+function del(url){
+	return "A url " + url + " foi chamada delete"
 }
