@@ -6,11 +6,12 @@ const http = require('http'),
 const server = http.createServer((req, res)=>{
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('vamos ver se funciona mesmo');
+  res.end(filtro(req));
 });
 server.listen(port,()=>{
   console.log(`Server running`);
 });
 
-
-
+function filtro(req){
+	return req.url + " " + req.method
+}
