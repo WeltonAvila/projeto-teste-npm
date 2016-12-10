@@ -15,3 +15,11 @@ server.listen(port,()=>{
 function filtro(req){
 	return req.url + " " + req.method
 }
+
+function get(){
+	return
+}
+
+function post(){
+	
+}
