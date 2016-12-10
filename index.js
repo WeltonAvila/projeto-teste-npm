@@ -42,5 +42,13 @@ function get(url){
 
 function post(url){
 	return "A url " + url + " foi chamada POST"
+}
+
+function put(url){
+	return "A url " + url + " foi chamada PUT"
+}
+
+function del(url){
+	return "A url " + url + " foi chamada delete"
 
 }
