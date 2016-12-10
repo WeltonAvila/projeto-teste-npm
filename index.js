@@ -13,13 +13,34 @@ server.listen(port,()=>{
 });
 
 function filtro(req){
+	switch (req.method) {
+		case 'GET':
+			return get(req.url)
+			break;
+
+			case 'PUT':
+			return get(req.url)
+			break;
+
+			case 'DELETE':
+			return get(req.url)
+			break;
+
+			case 'POST':
+			return del(req.url)
+			break;
+
+		default:
+
+	}
 	return req.url + " " + req.method
 }
 
-function get(){
-	return
+function get(url){
+	return "A url " + url + " foi chamada GET"
 }
 
-function post(){
-	
+function post(url){
+	return "A url " + url + " foi chamada POST"
+
 }
